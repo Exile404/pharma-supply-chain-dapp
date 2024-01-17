@@ -3,13 +3,11 @@ const hre = require("hardhat");
 
 async function main() {
 
-  const lock = await hre.ethers.deployContract("Lock", [unlockTime], {
-    value: lockedAmount,
-  });
+  const tracking = await hre.ethers.deployContract("Tracking",);
 
-  await lock.waitForDeployment();
+  await tracking.waitForDeployment();
 
-  console.log( `Tracking deployed to ${lock.target}`);
+  console.log( `Tracking deployed to ${tracking.target}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
