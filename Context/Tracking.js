@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 
 import tracking from "./Tracking.json";
 
-const ContractAddress = "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9";
+const ContractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 const ContractABI = tracking.abi;
 
 const fetchContract = (signerOrProvider) =>
@@ -44,7 +44,7 @@ export const TrackingProvider = ({ children }) => {
     }
 
 
-    const getAllSOrder = async () => {
+    const getAllOrder = async () => {
         try {
             const provider = new ethers.providers.JsonRpcProvider();
             const contract = fetchContract(provider);
@@ -212,7 +212,7 @@ export const TrackingProvider = ({ children }) => {
             value={{
                 connectWallet,
                 createOrder,
-                getAllSOrder,
+                getAllOrder,
                 completeOrder,
                 getOrder,
                 startOrder,
