@@ -39,7 +39,7 @@ const Table = ({
       </div>
       <div className='mt-12 shadow-sm border rounded-lg oveflow-x-auto'>
         <table className='w-full table-auto text-sm text-left'>
-          <thead className='bg-gray-50 text-gray-600 font-medium border-b'>
+          <thead className='bg-gray-50 text-gray-600 font-medium border-b text-center'>
             <tr>
               <th className='py-3 px-6'>Sender</th>
               <th className='py-3 px-6'>Receiver</th>
@@ -51,7 +51,7 @@ const Table = ({
               <th className='py-3 px-6'>Status</th>
             </tr>
           </thead>
-        <tbody className='text-gray-600 divide-y'>
+        <tbody className='text-gray-600 divide-y text-center'>
           {allOrdersData?.map((order,idx)=>(
             <tr key={idx}>
               <td className='px-6 py-4 whitespace-nowrap'>
@@ -61,7 +61,7 @@ const Table = ({
                 {order.receiver.slice(0,15)}...
               </td>
               <td className='px-6 py-4 whitespace-nowrap'>
-                {order.pickupTime}
+                {converTime(order.pickupTime)}
               </td>
               <td className='px-6 py-4 whitespace-nowrap'>
                 {order.distance} km
