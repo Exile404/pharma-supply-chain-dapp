@@ -6,19 +6,19 @@ import Image from 'next/image';
 const Footer = () => {
   const footerNavs = [
     {
-      href: "javascript:void()",
+      href: "#",
       name: "Terms"
     },
     {
-      href: "javascript:void()",
+      href: "#",
       name: "License",
     },
     {
-      href: "javascript:void()",
+      href: "#",
       name: "Privacy",
     },
     {
-      href: "javascript:void()",
+      href: "#",
       name: "About Us",
     }
   ];
@@ -52,10 +52,10 @@ const Footer = () => {
               Get the app
             </p>
             <div className='flex items-center gap-3 mt-3 sm:block'>
-              <a href='javascript:void()'>
+              <a href='#'>
                 <Fot1 />
               </a>
-              <a href='javascript:void()' className='mt-0 block sm:mt-3'>
+              <a href='#' className='mt-0 block sm:mt-3'>
                 <Fot2 />
               </a>
             </div>
