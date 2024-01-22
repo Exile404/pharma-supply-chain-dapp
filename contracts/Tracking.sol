@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-contract Tracking {
+contract Tracking{
     enum DeliveryStatus { PENDING, IN_TRANSIT, SOLD}
 
     struct Order {

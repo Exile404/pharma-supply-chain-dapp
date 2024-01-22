@@ -1,13 +1,14 @@
-
 const hre = require("hardhat");
 
 async function main() {
+  
 
-  const tracking = await hre.ethers.deployContract("Tracking",);
+  const Tracking = await hre.ethers.getContractFactory("Tracking");
 
-  await tracking.waitForDeployment();
+  const tracking =  await Tracking.deploy();
+  await tracking.deployed();
 
-  console.log( `Tracking deployed to ${tracking.target}`);
+  console.log(`Tracking with deployed to ${tracking.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
