@@ -70,7 +70,7 @@ const Table = ({
                 {order.price}
               </td>
               <td className='px-6 py-4 whitespace-nowrap'>
-                { order.deliveryTime}
+                { converTime(order.deliveryTime)}
               </td>
               <td className='px-6 py-4 whitespace-nowrap'>
                 { order.isSold? "Sold":"Not Sold"}

@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 
 import tracking from "./Tracking.json";
 
-const ContractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+const ContractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
 const ContractABI = tracking.abi;
 
 const fetchContract = (signerOrProvider) =>
@@ -80,7 +80,7 @@ export const TrackingProvider = ({ children }) => {
 
 
         } catch (error) {
-            console.log("error in getting shipment");
+            console.log("error in getting order");
         }
     };
 

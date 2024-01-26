@@ -76,7 +76,7 @@ contract Tracking{
         Order storage order = orders[_sender][_index];
         TypeOrder storage typeorder = typeorders[_index];
         require(order.receiver == _receiver,"Invalid receiver");
-        require(order.status == DeliveryStatus.PENDING, "Medicine not in transit.");
+        require(order.status == DeliveryStatus.IN_TRANSIT, "Medicine not the way.");
         require(!order.isSold,"Medicine already sold");
         order.status = DeliveryStatus.SOLD;
         order.deliveryTime = block.timestamp;
